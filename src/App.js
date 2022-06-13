@@ -5,7 +5,6 @@ import Contact from "./Pages/contact/components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddUser from "./Pages/Home/components/AddEmployee";
 
-
 const App = () => {
 
   return (

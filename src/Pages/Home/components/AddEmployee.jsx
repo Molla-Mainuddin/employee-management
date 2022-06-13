@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import swal from 'sweetalert';
 
 const AddUser = () => {
     const[employeeData, setEmployeeData] = useState({
@@ -10,7 +11,7 @@ const AddUser = () => {
         age: "",
         salary: ""
     });
-    // console.log(employeeData);
+
     const onInputChange = (event)=>{
         setEmployeeData({ ...employeeData, [event.target.name]:event.target.value });
     };
@@ -18,8 +19,16 @@ const AddUser = () => {
 
     const onSubmit = async (event)=>{
         event.preventDefault();
+        document.getElementById("addButton").value="Adding...";
         const res = await axios.post("/employees",employeeData);
         if(res.status===200){
+            swal({
+                title: "Data Successfully Added!",
+                text: "",
+                icon: "success",
+                button: "OK!",
+              });
+            
             setEmployeeData({
                 id: "",
                 name: "",
@@ -136,9 +145,10 @@ const AddUser = () => {
                     <div className="md:flex md:items-center">
                         <div className="md:w-1/3">
                             <input className="shadow bg-teal-400 hover:bg-teal-500 focus:shadow-outline focus:outline-none text-white 
-                                font-bold py-2 px-4 rounded cursor-pointer" 
+                                font-bold py-2 px-4 rounded cursor-pointer"
+                                id='addButton' 
                                 type="submit"
-                                value="Add" 
+                                value="Add"
                             />
                         </div>
                         <div className="md:w-2/3"></div>
