@@ -18,8 +18,16 @@ const AddUser = () => {
 
     const onSubmit = async (event)=>{
         event.preventDefault();
-        await axios.post("/employees",employeeData);
-        
+        const res = await axios.post("/employees",employeeData);
+        if(res.status===200){
+            setEmployeeData({
+                id: "",
+                name: "",
+                gender: "",
+                age: "",
+                salary: ""
+            })
+        }
     }
 
     return (
