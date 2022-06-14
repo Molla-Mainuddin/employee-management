@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav className="h-auto flex items-center justify-between bg-teal-500 py-2 px-5 lg:px-32">
+        <nav className="fixed w-full h-auto flex items-center justify-between bg-teal-500 py-2 px-5 lg:px-32">
             <div className="flex items-center flex-shrink-0 text-white">
                 <NavLink to="/">
                     <img src='assets/employee_m-logo.jpg' alt='broken' className='h-10 w-10 rounded-full cursor-pointer lg:h-12 lg:w-12 ' />

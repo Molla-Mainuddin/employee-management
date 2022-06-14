@@ -40,9 +40,9 @@ const AddEmployee = () => {
     }
 
     return (
-        <div className=''>
+        <div className='pt-20'>
             {/* For Back to home button */}
-            <div className='mt-8 w-4/5 mx-auto'>
+            <div className='w-4/5 mx-auto'>
                 <Link to="/" type="button" className="text-white bg-teal-500 hover:bg-teal-600 
                  font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
                     <span className='flex items-center space-x-1'>

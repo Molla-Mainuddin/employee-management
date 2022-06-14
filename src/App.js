@@ -12,13 +12,52 @@ const App = () => {
     <>
       <div className="App">
         <BrowserRouter>
-          <Navbar />
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/adduser" element={<AddEmployee />} />
-            <Route exact path="/edit/:empid" element={<EditEmployee />} />
+            <Route 
+              exact path="/" 
+              element={
+                <>
+                  <Navbar />
+                  <Home />
+                </>
+              } 
+            />
+            <Route 
+                exact path="/about" 
+                element={
+                  <>
+                    <Navbar />
+                    <About />
+                  </>
+                } 
+              />
+            <Route 
+                exact path="/contact" 
+                element={
+                    <>
+                      <Navbar />
+                      <Contact />
+                    </>
+                  } 
+              />
+            <Route 
+              exact path="/adduser" 
+              element={
+                  <>
+                    <Navbar />
+                    <AddEmployee />
+                  </>
+                } 
+              />
+            <Route 
+                exact path="/edit/:empid" 
+                element={
+                    <>
+                      <Navbar />
+                      <EditEmployee />
+                    </>
+                  } 
+              />
           </Routes>
         </BrowserRouter>
       </div>
