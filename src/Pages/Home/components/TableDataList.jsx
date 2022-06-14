@@ -30,7 +30,7 @@ const TableDataList = () => {
     }
 
     return (
-        <div className="border shadow-md w-4/5 mx-auto">
+        <div className="w-[90%] overflow-x-auto border shadow-md mx-auto lg:w-4/5 ">
             <table className="w-full text-base text-left text-gray-500">
                 <thead className="text-xs text-gray-50 uppercase bg-gray-600">
                     <tr>

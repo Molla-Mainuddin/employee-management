@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav className="h-auto flex items-center justify-between bg-teal-500 py-2 px-32">
+        <nav className="h-auto flex items-center justify-between bg-teal-500 py-2 px-5 lg:px-32">
             <div className="flex items-center flex-shrink-0 text-white">
                 <NavLink to="/">
-                    <img src='assets/employee_m-logo.jpg' alt='broken' className='h-12 w-12 rounded-full cursor-pointer' />
+                    <img src='assets/employee_m-logo.jpg' alt='broken' className='h-10 w-10 rounded-full cursor-pointer lg:h-12 lg:w-12 ' />
                 </NavLink>
                 {/* <span className="font-semibold text-xl tracking-tight">Employee</span> */}
             </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
                     </svg>
                 </button>
             </div>
-            <div className="w-full block lg:flex lg:items-center lg:w-auto">
+            <div className="w-full hidden lg:flex lg:items-center lg:w-auto">
                 <div className="text-lg lg:flex-grow">
                     <NavLink to="/" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                         Home
