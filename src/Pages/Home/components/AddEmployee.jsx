@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import swal from 'sweetalert';
 
-const AddUser = () => {
+const AddEmployee = () => {
     const[employeeData, setEmployeeData] = useState({
         id: "",
         name: "",
@@ -159,4 +159,4 @@ const AddUser = () => {
     )
 }
 
-export default AddUser
+export default AddEmployee;

@@ -3,7 +3,8 @@ import Home from "./Pages/Home/components/Home";
 import About from "./Pages/about/components/About";
 import Contact from "./Pages/contact/components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AddUser from "./Pages/Home/components/AddEmployee";
+import EditEmployee from "./Pages/Home/components/EditEmployee";
+import AddEmployee from "./Pages/Home/components/AddEmployee";
 
 const App = () => {
 
@@ -16,7 +17,8 @@ const App = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/adduser" element={<AddUser />} />
+            <Route exact path="/adduser" element={<AddEmployee />} />
+            <Route exact path="/edit/:empid" element={<EditEmployee />} />
           </Routes>
         </BrowserRouter>
       </div>
